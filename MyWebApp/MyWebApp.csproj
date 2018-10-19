@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bkp\**" />
+    <Content Remove="bkp\**" />
+    <EmbeddedResource Remove="bkp\**" />
+    <None Remove="bkp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\ts\principal.ts" />
+    <Content Remove="wwwroot\ts\produto.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClienteApp\app\loja\carrinho\carrinho.component.ts" />
+    <None Remove="ClienteApp\app\loja\efetivarCompra.component.ts" />
+    <None Remove="ClienteApp\app\loja\listaProduto.component.ts" />
+    <None Remove="ClienteApp\app\loja\loja.component.ts" />
+    <None Remove="ClienteApp\app\modelos\pedidos.ts" />
+    <None Remove="ClienteApp\app\modelos\produto.ts" />
+    <None Remove="ClienteApp\app\servicos\dataService.ts" />
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClienteApp\app\loja\carrinho\carrinho.component.ts" />
+    <TypeScriptCompile Include="ClienteApp\app\loja\listaProduto.component.ts" />
+    <TypeScriptCompile Include="ClienteApp\app\loja\efetivarCompra\efetivarCompra.component.ts" />
+    <TypeScriptCompile Include="ClienteApp\app\loja\loja.component.ts" />
+    <TypeScriptCompile Include="ClienteApp\app\modelos\pedidos.ts" />
+    <TypeScriptCompile Include="ClienteApp\app\modelos\produto.ts" />
+    <TypeScriptCompile Include="ClienteApp\app\servicos\dataService.ts" />
+    <TypeScriptCompile Include="wwwroot\ts\principal.ts" />
+    <TypeScriptCompile Include="wwwroot\ts\produto.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  
+  <Target Name="ScriptPublicacao" BeforeTargets="BeforePublish">
+    <Exec Command="npm install" />
+    <Exec Command="gulp" />
+    <Exec Command="ng build" />
+  </Target>
+</Project>

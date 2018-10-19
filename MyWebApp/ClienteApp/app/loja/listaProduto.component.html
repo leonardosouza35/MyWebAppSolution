@@ -1,0 +1,8 @@
+﻿<div class="row">
+    <div class=" produto-info col-xs-4 well" *ngFor="let p of produtos">
+        <img src="/img/smartphone-lg-k10.jpg" width="200" height="200" />        
+        <h4>{{p.nome}}</h4>
+        <h3><strong>{{p.preco | currency:"R$":true}}</strong></h3>        
+        <button id="meu-button" class="btn btn-success btn-sm" (click)="adicionarProduto(p)">Comprar</button>
+    </div>
+</div>

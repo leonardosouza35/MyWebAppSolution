@@ -1,0 +1,22 @@
+﻿<h3>Carrinho de compras</h3>
+<div>Contagem: {{ data.pedido.ItensPedidos.length}}</div>
+<div>Total: {{data.pedido.total | currency:"R$":true}}</div>
+<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Quantidade</td>
+            <td>Preço</td>
+            <td>Total</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data.pedido.ItensPedidos">
+            <td>{{item.Produto.nome }}</td>
+            <td>{{item.Quantidade}}</td>
+            <td>{{item.Produto.preco | currency:"R$":true}}</td>
+            <td>{{(item.Produto.preco * item.Quantidade) | currency:"R$":true}}</td>
+        </tr>
+    </tbody>
+</table>
+<a routerLink="efetivarCompra" class="btn btn-success" *ngIf="data.pedido.ItensPedidos.length > 0">Efetivar Compra</a>
