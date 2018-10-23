@@ -1,39 +1,38 @@
 {
-  "name": "myweb-app",
+  "name": "my-web-app",
   "version": "0.0.0",
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^5.0.0",
-    "@angular/common": "^5.0.0",
-    "@angular/compiler": "^5.0.0",
-    "@angular/core": "^5.0.0",
-    "@angular/forms": "^5.0.0",
-    "@angular/http": "^5.0.0",
-    "@angular/platform-browser": "^5.0.0",
-    "@angular/platform-browser-dynamic": "^5.0.0",
-    "@angular/router": "^5.0.0",
-    "core-js": "^2.4.1",
-    "lodash": "^4.17.5",
-    "rxjs": "^5.5.2",
-    "rxjs-compat": "^6.1.0",
-    "zone.js": "^0.8.14"
+    "@angular/animations": "~7.0.0",
+    "@angular/common": "~7.0.0",
+    "@angular/compiler": "~7.0.0",
+    "@angular/core": "~7.0.0",
+    "@angular/forms": "~7.0.0",
+    "@angular/http": "~7.0.0",
+    "@angular/platform-browser": "~7.0.0",
+    "@angular/platform-browser-dynamic": "~7.0.0",
+    "@angular/router": "~7.0.0",
+    "core-js": "^2.5.4",
+    "rxjs": "~6.3.3",
+    "rxjs-compat": "6.3.3",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.8",
-    "@angular/compiler-cli": "^5.0.0",
-    "@angular/language-service": "^5.0.0",
-    "typescript": "~2.4.2",
-    "gulp": "3.9.1",
-    "gulp-uglify": "~3.0.0",
-    "gulp-concat": "2.6.1"
+    "@angular-devkit/build-angular": "~0.10.0",
+    "@angular/cli": "~7.0.1",
+    "@angular/compiler-cli": "~7.0.0",
+    "@angular/language-service": "~7.0.0",
+    "@types/node": "~8.9.4",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.1.1"
   }
 }
